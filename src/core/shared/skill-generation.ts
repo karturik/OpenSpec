@@ -27,6 +27,12 @@ import {
   getOpsxVerifyCommandTemplate,
   getOpsxOnboardCommandTemplate,
   getOpsxProposeCommandTemplate,
+  getProposeTeamSkillTemplate,
+  getOpsxProposeTeamCommandTemplate,
+  getExploreTeamSkillTemplate,
+  getOpsxExploreTeamCommandTemplate,
+  getVerifyTeamSkillTemplate,
+  getOpsxVerifyTeamCommandTemplate,
   type SkillTemplate,
 } from '../templates/skill-templates.js';
 import type { CommandContent } from '../command-generation/index.js';
@@ -66,6 +72,9 @@ export function getSkillTemplates(workflowFilter?: readonly string[]): SkillTemp
     { template: getVerifyChangeSkillTemplate(), dirName: 'openspec-verify-change', workflowId: 'verify' },
     { template: getOnboardSkillTemplate(), dirName: 'openspec-onboard', workflowId: 'onboard' },
     { template: getOpsxProposeSkillTemplate(), dirName: 'openspec-propose', workflowId: 'propose' },
+    { template: getProposeTeamSkillTemplate(), dirName: 'openspec-propose-team', workflowId: 'propose-team' },
+    { template: getExploreTeamSkillTemplate(), dirName: 'openspec-explore-team', workflowId: 'explore-team' },
+    { template: getVerifyTeamSkillTemplate(), dirName: 'openspec-verify-team', workflowId: 'verify-team' },
   ];
 
   if (!workflowFilter) return all;
@@ -92,6 +101,9 @@ export function getCommandTemplates(workflowFilter?: readonly string[]): Command
     { template: getOpsxVerifyCommandTemplate(), id: 'verify' },
     { template: getOpsxOnboardCommandTemplate(), id: 'onboard' },
     { template: getOpsxProposeCommandTemplate(), id: 'propose' },
+    { template: getOpsxProposeTeamCommandTemplate(), id: 'propose-team' },
+    { template: getOpsxExploreTeamCommandTemplate(), id: 'explore-team' },
+    { template: getOpsxVerifyTeamCommandTemplate(), id: 'verify-team' },
   ];
 
   if (!workflowFilter) return all;

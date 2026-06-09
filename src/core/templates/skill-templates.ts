@@ -17,4 +17,7 @@ export { getBulkArchiveChangeSkillTemplate, getOpsxBulkArchiveCommandTemplate } 
 export { getVerifyChangeSkillTemplate, getOpsxVerifyCommandTemplate } from './workflows/verify-change.js';
 export { getOnboardSkillTemplate, getOpsxOnboardCommandTemplate } from './workflows/onboard.js';
 export { getOpsxProposeSkillTemplate, getOpsxProposeCommandTemplate } from './workflows/propose.js';
+export { getProposeTeamSkillTemplate, getOpsxProposeTeamCommandTemplate } from './workflows/propose-team.js';
+export { getExploreTeamSkillTemplate, getOpsxExploreTeamCommandTemplate } from './workflows/explore-team.js';
+export { getVerifyTeamSkillTemplate, getOpsxVerifyTeamCommandTemplate } from './workflows/verify-team.js';
 export { getFeedbackSkillTemplate } from './workflows/feedback.js';

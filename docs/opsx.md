@@ -158,12 +158,15 @@ rules:
 | Command | What it does |
 |---------|--------------|
 | `/opsx:propose` | Create a change and generate planning artifacts in one step (default quick path) |
+| `/opsx:propose-team` | Like `propose`, but a coordinated **Agent Team** of specialist roles investigates in parallel and challenges each other before the lead writes the artifacts. For medium-to-hard changes. Experimental; Claude-only; requires Agent Teams (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`). Opt-in via the `custom` profile. |
 | `/opsx:explore` | Think through ideas, investigate problems, clarify requirements |
+| `/opsx:explore-team` | Like `explore`, but a coordinated **Agent Team** maps a large codebase in parallel (cartography) or interrogates an idea from multiple perspectives (elicitation) before the lead synthesizes one shared understanding. Never implements; captures only if asked. Experimental; Claude-only; requires Agent Teams (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`). Opt-in via the `custom` profile. |
 | `/opsx:new` | Start a new change scaffold (expanded workflow) |
 | `/opsx:continue` | Create the next artifact (expanded workflow) |
 | `/opsx:ff` | Fast-forward planning artifacts (expanded workflow) |
 | `/opsx:apply` | Implement tasks, updating artifacts as needed |
 | `/opsx:verify` | Validate implementation against artifacts (expanded workflow) |
+| `/opsx:verify-team` | Like `verify`, but a coordinated **Agent Team** of independent per-dimension verifiers investigates in isolation and the lead arbitrates their findings into one report. For large or high-stakes changes where one agent would anchor. Experimental; Claude-only; requires Agent Teams (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`). Opt-in via the `custom` profile. |
 | `/opsx:sync` | Sync delta specs to main (default workflow, optional) |
 | `/opsx:archive` | Archive when done |
 | `/opsx:bulk-archive` | Archive multiple completed changes (expanded workflow) |

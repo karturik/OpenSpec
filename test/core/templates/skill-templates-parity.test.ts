@@ -23,6 +23,12 @@ import {
   getOpsxSyncCommandTemplate,
   getOpsxProposeCommandTemplate,
   getOpsxProposeSkillTemplate,
+  getProposeTeamSkillTemplate,
+  getOpsxProposeTeamCommandTemplate,
+  getExploreTeamSkillTemplate,
+  getOpsxExploreTeamCommandTemplate,
+  getVerifyTeamSkillTemplate,
+  getOpsxVerifyTeamCommandTemplate,
   getOpsxVerifyCommandTemplate,
   getSyncSpecsSkillTemplate,
   getVerifyChangeSkillTemplate,
@@ -53,6 +59,12 @@ const EXPECTED_FUNCTION_HASHES: Record<string, string> = {
   getOpsxProposeSkillTemplate: 'bae22279f8c7f711a8d5c5289551551d48197ddf5a99b695d96fff5339e08a49',
   getOpsxProposeCommandTemplate: '870ab824c2aeb825fe3fe161a1f223633b4fff308ecaeb8197cbf309db2ddf02',
   getFeedbackSkillTemplate: 'd7d83c5f7fc2b92fe8f4588a5bf2d9cb315e4c73ec19bcd5ef28270906319a0d',
+  getProposeTeamSkillTemplate: '7e52721ca523fd1bfd1e344315ec2157661f023887300a03b2fed0ed757343c4',
+  getOpsxProposeTeamCommandTemplate: '9f8683207fdebde9463c84efa00bf08b4bc60a16573c2b22af545aed34edbf17',
+  getExploreTeamSkillTemplate: '2646971486bc2fed77ffcb8ef494a05ee3699ea17bdf84c622a482caccbfec9f',
+  getOpsxExploreTeamCommandTemplate: '77e300aa9227922fecacf43bc3b60e2a9c04e9e5820763b925e244fd9752f877',
+  getVerifyTeamSkillTemplate: 'cb62d4370d77d23863a65a52ca0982c82700561447cd0f58b98cd089b994ee1c',
+  getOpsxVerifyTeamCommandTemplate: 'dc40077336f2c2fe1997e9de7b03747e37f1be732260b8a0b0b7ab3263381f00',
 };
 
 const EXPECTED_GENERATED_SKILL_CONTENT_HASHES: Record<string, string> = {
@@ -67,6 +79,9 @@ const EXPECTED_GENERATED_SKILL_CONTENT_HASHES: Record<string, string> = {
   'openspec-verify-change': 'a2acecd0c2b4e57080a314e5e7a093e0688293c37e446eb45d378f5050058550',
   'openspec-onboard': 'b924ea3c97543ebb7ee82c5f194afe7ce87a521c32b85616f445240ab33a02ab',
   'openspec-propose': '56aa526fe1e9fac956ad3ad570a3a259d27f54b05086940d85af136a62069292',
+  'openspec-propose-team': '6827ac91515f7f82d3fa1a8ac0e6e6fb9487ca02f7227956134df9ff4b73f1c7',
+  'openspec-explore-team': 'b29db1cfc0d2fafd3663e4d91f1b82633a195a3208a289abc6e72c497a830812',
+  'openspec-verify-team': '348b303b26568db08eb578002c0e001f32d11b1e348f630cadb057084e433ae6',
 };
 
 function stableStringify(value: unknown): string {
@@ -115,6 +130,12 @@ describe('skill templates split parity', () => {
       getOpsxProposeSkillTemplate,
       getOpsxProposeCommandTemplate,
       getFeedbackSkillTemplate,
+      getProposeTeamSkillTemplate,
+      getOpsxProposeTeamCommandTemplate,
+      getExploreTeamSkillTemplate,
+      getOpsxExploreTeamCommandTemplate,
+      getVerifyTeamSkillTemplate,
+      getOpsxVerifyTeamCommandTemplate,
     };
 
     const actualHashes = Object.fromEntries(
@@ -139,6 +160,9 @@ describe('skill templates split parity', () => {
       ['openspec-verify-change', getVerifyChangeSkillTemplate],
       ['openspec-onboard', getOnboardSkillTemplate],
       ['openspec-propose', getOpsxProposeSkillTemplate],
+      ['openspec-propose-team', getProposeTeamSkillTemplate],
+      ['openspec-explore-team', getExploreTeamSkillTemplate],
+      ['openspec-verify-team', getVerifyTeamSkillTemplate],
     ];
 
     const actualHashes = Object.fromEntries(
