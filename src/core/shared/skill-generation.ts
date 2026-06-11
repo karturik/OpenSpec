@@ -31,6 +31,8 @@ import {
   getOpsxProposeTeamCommandTemplate,
   getExploreTeamSkillTemplate,
   getOpsxExploreTeamCommandTemplate,
+  getApplyTeamSkillTemplate,
+  getOpsxApplyTeamCommandTemplate,
   getVerifyTeamSkillTemplate,
   getOpsxVerifyTeamCommandTemplate,
   type SkillTemplate,
@@ -74,6 +76,7 @@ export function getSkillTemplates(workflowFilter?: readonly string[]): SkillTemp
     { template: getOpsxProposeSkillTemplate(), dirName: 'openspec-propose', workflowId: 'propose' },
     { template: getProposeTeamSkillTemplate(), dirName: 'openspec-propose-team', workflowId: 'propose-team' },
     { template: getExploreTeamSkillTemplate(), dirName: 'openspec-explore-team', workflowId: 'explore-team' },
+    { template: getApplyTeamSkillTemplate(), dirName: 'openspec-apply-team', workflowId: 'apply-team' },
     { template: getVerifyTeamSkillTemplate(), dirName: 'openspec-verify-team', workflowId: 'verify-team' },
   ];
 
@@ -103,6 +106,7 @@ export function getCommandTemplates(workflowFilter?: readonly string[]): Command
     { template: getOpsxProposeCommandTemplate(), id: 'propose' },
     { template: getOpsxProposeTeamCommandTemplate(), id: 'propose-team' },
     { template: getOpsxExploreTeamCommandTemplate(), id: 'explore-team' },
+    { template: getOpsxApplyTeamCommandTemplate(), id: 'apply-team' },
     { template: getOpsxVerifyTeamCommandTemplate(), id: 'verify-team' },
   ];
 

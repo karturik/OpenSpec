@@ -27,6 +27,8 @@ import {
   getOpsxProposeTeamCommandTemplate,
   getExploreTeamSkillTemplate,
   getOpsxExploreTeamCommandTemplate,
+  getApplyTeamSkillTemplate,
+  getOpsxApplyTeamCommandTemplate,
   getVerifyTeamSkillTemplate,
   getOpsxVerifyTeamCommandTemplate,
   getOpsxVerifyCommandTemplate,
@@ -63,6 +65,8 @@ const EXPECTED_FUNCTION_HASHES: Record<string, string> = {
   getOpsxProposeTeamCommandTemplate: '9f8683207fdebde9463c84efa00bf08b4bc60a16573c2b22af545aed34edbf17',
   getExploreTeamSkillTemplate: '2646971486bc2fed77ffcb8ef494a05ee3699ea17bdf84c622a482caccbfec9f',
   getOpsxExploreTeamCommandTemplate: '77e300aa9227922fecacf43bc3b60e2a9c04e9e5820763b925e244fd9752f877',
+  getApplyTeamSkillTemplate: '5fe31a0a16c98aa6279843ad42f8ffbe1a189bb713bf707d7bec8f3db6469e6b',
+  getOpsxApplyTeamCommandTemplate: 'ca889847f6d85fd2b5b54524fa8a377a15eac1c76b9132039cdbb08e8633944c',
   getVerifyTeamSkillTemplate: 'cb62d4370d77d23863a65a52ca0982c82700561447cd0f58b98cd089b994ee1c',
   getOpsxVerifyTeamCommandTemplate: 'dc40077336f2c2fe1997e9de7b03747e37f1be732260b8a0b0b7ab3263381f00',
 };
@@ -81,6 +85,7 @@ const EXPECTED_GENERATED_SKILL_CONTENT_HASHES: Record<string, string> = {
   'openspec-propose': '56aa526fe1e9fac956ad3ad570a3a259d27f54b05086940d85af136a62069292',
   'openspec-propose-team': '6827ac91515f7f82d3fa1a8ac0e6e6fb9487ca02f7227956134df9ff4b73f1c7',
   'openspec-explore-team': 'b29db1cfc0d2fafd3663e4d91f1b82633a195a3208a289abc6e72c497a830812',
+  'openspec-apply-team': '23ebe1d4a6820ee875e2f91d5f27763b3d17953e6cf260ae975005d458fbe086',
   'openspec-verify-team': '348b303b26568db08eb578002c0e001f32d11b1e348f630cadb057084e433ae6',
 };
 
@@ -134,6 +139,8 @@ describe('skill templates split parity', () => {
       getOpsxProposeTeamCommandTemplate,
       getExploreTeamSkillTemplate,
       getOpsxExploreTeamCommandTemplate,
+      getApplyTeamSkillTemplate,
+      getOpsxApplyTeamCommandTemplate,
       getVerifyTeamSkillTemplate,
       getOpsxVerifyTeamCommandTemplate,
     };
@@ -162,6 +169,7 @@ describe('skill templates split parity', () => {
       ['openspec-propose', getOpsxProposeSkillTemplate],
       ['openspec-propose-team', getProposeTeamSkillTemplate],
       ['openspec-explore-team', getExploreTeamSkillTemplate],
+      ['openspec-apply-team', getApplyTeamSkillTemplate],
       ['openspec-verify-team', getVerifyTeamSkillTemplate],
     ];
 

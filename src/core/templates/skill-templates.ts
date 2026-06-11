@@ -19,5 +19,6 @@ export { getOnboardSkillTemplate, getOpsxOnboardCommandTemplate } from './workfl
 export { getOpsxProposeSkillTemplate, getOpsxProposeCommandTemplate } from './workflows/propose.js';
 export { getProposeTeamSkillTemplate, getOpsxProposeTeamCommandTemplate } from './workflows/propose-team.js';
 export { getExploreTeamSkillTemplate, getOpsxExploreTeamCommandTemplate } from './workflows/explore-team.js';
+export { getApplyTeamSkillTemplate, getOpsxApplyTeamCommandTemplate } from './workflows/apply-team.js';
 export { getVerifyTeamSkillTemplate, getOpsxVerifyTeamCommandTemplate } from './workflows/verify-team.js';
 export { getFeedbackSkillTemplate } from './workflows/feedback.js';

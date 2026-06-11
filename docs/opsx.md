@@ -165,6 +165,7 @@ rules:
 | `/opsx:continue` | Create the next artifact (expanded workflow) |
 | `/opsx:ff` | Fast-forward planning artifacts (expanded workflow) |
 | `/opsx:apply` | Implement tasks, updating artifacts as needed |
+| `/opsx:apply-team` | Like `apply`, but the lead single-writes all code and tests while a panel of read-only reviewers **derived from the change itself** reviews each slice's diff in-loop as it lands; hands off to `/opsx:verify-team` for the independent gate. For medium-to-large or high-risk changes. Experimental; Claude-only; requires Agent Teams (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`). Opt-in via the `custom` profile. |
 | `/opsx:verify` | Validate implementation against artifacts (expanded workflow) |
 | `/opsx:verify-team` | Like `verify`, but a coordinated **Agent Team** of independent per-dimension verifiers investigates in isolation and the lead arbitrates their findings into one report. For large or high-stakes changes where one agent would anchor. Experimental; Claude-only; requires Agent Teams (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`). Opt-in via the `custom` profile. |
 | `/opsx:sync` | Sync delta specs to main (default workflow, optional) |

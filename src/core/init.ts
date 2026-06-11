@@ -74,6 +74,7 @@ const WORKFLOW_TO_SKILL_DIR: Record<string, string> = {
   'propose': 'openspec-propose',
   'propose-team': 'openspec-propose-team',
   'explore-team': 'openspec-explore-team',
+  'apply-team': 'openspec-apply-team',
   'verify-team': 'openspec-verify-team',
 };
 

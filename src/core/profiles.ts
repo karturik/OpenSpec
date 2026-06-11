@@ -30,6 +30,7 @@ export const ALL_WORKFLOWS = [
   'onboard',
   'propose-team',
   'explore-team',
+  'apply-team',
   'verify-team',
 ] as const;
 

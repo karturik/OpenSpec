@@ -25,6 +25,7 @@ export const SKILL_NAMES = [
   'openspec-propose',
   'openspec-propose-team',
   'openspec-explore-team',
+  'openspec-apply-team',
   'openspec-verify-team',
 ] as const;
 
@@ -47,6 +48,7 @@ export const COMMAND_IDS = [
   'propose',
   'propose-team',
   'explore-team',
+  'apply-team',
   'verify-team',
 ] as const;
 
